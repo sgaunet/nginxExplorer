@@ -11,3 +11,7 @@ Seedocker-compose.yml for example
 ```
 ./build.sh
 ```
+
+# Basic Auth
+
+[See here](https://github.com/sgaunet/nginXplorerAuth)
