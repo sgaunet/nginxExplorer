@@ -4,7 +4,7 @@ Just a little container to expose a file system.
 
 # Run
 
-Seedocker-compose.yml for example
+See docker-compose.yml for example
 
 # Build
 
