@@ -1,0 +1,27 @@
+# https://taskfile.dev
+version: '3'
+vars:
+  IMG: sgaunet/nginxplorer:latest
+
+tasks:
+  default:
+    desc: "List all tasks"
+    cmds:
+      - task -a
+
+  tests:
+    desc: "Run tests"
+    dir: tests
+    cmds:
+      - venom run testsuite.yml --output-dir="log" --stop-on-failure
+
+  image:
+    desc: "Build image"
+    cmds:
+      - docker build . -t {{.IMG}}
+    
+  push:
+    desc: "Push image"
+    cmds:
+      - docker build . -t {{.IMG}}
+    

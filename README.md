@@ -4,12 +4,12 @@ Just a little container to expose a file system.
 
 # Run
 
-See docker-compose.yml for example
+See [tests/docker-compose.yml](tests/docker-compose.yml) for example
 
 # Build
 
 ```
-./build.sh
+task image
 ```
 
 # Basic Auth
