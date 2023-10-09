@@ -1,0 +1,30 @@
+name: Exec testsuite
+
+testcases:
+- name: init
+  steps:
+
+- name: docker-compose up -d
+  steps:
+  - type: exec
+    script: |
+      # cd {{.venom.testsuite.workdir}}/..
+      docker-compose up -d
+    assertions:
+    - result.code ShouldEqual 0
+
+- name: wget -O /dev/null http://localhost:8000/docker-compose.yml
+  steps:
+  - type: exec
+    script: |
+      wget -O /dev/null http://localhost:8000/docker-compose.yml
+    assertions:
+    - result.code ShouldEqual 0
+
+- name: docker-compose down
+  steps:
+  - type: exec
+    script: |
+      docker-compose down
+    assertions:
+    - result.code ShouldEqual 0
