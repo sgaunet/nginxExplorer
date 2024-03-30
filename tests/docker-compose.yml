@@ -3,7 +3,7 @@ version: '3.2'
 services:
   WWW:
     image: sgaunet/nginxplorer:latest
-    restart: always
+    # restart: 
     ports:
       - "8000:80"     # The HTTP port
     volumes:
