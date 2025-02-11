@@ -1,6 +1,6 @@
 # Nginx Explorer
 
-Just a little container to expose a file system.
+Just a little container to expose a file system. This project is now archived and can be easily replaced by this one: https://github.com/sgaunet/httpfileserver
 
 # Run
 
